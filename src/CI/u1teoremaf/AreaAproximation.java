@@ -1,24 +1,19 @@
-/* ITESS-TICS
-/*ENERO-JUNIO 2024 CALCULO INTEGRAL- UNIDAD 1 TEOREMA FUNDAMNETAL DE CALCULO 
-/* CALCULO DE APROXIMACION DE AREA 
-/* JUANA PAULINA VALENCIA LARA - JESUS NICOLAS GARCIA MOLINA 
-/* 09 DE FEBRERO DEL 2024 
-
- */
 package CI.u1teoremaf;
 
 /**
- *
- * @author pauvalencia
+ * ITESS-TICS ENERO-JUNIO 2024 CALCULO INTEGRAL- UNIDAD 1 TEOREMA FUNDAMENTAL DE CALCULO
+ * CALCULO DE APROXIMACION DE AREA JUANA PAULINA VALENCIA LARA - JESUS NICOLAS GARCIA MOLINA
+ * 09 DE FEBRERO DEL 2024
  */
+
 public class AreaAproximation {
 
     private double xIni;
     private double xEnd;
     private int n;
     private double dx;
-    private double x;
-    private double fx[];
+    private double[] x;
+    private double[] fx;
     private double area;
 
     public AreaAproximation(double xIni, double xEnd, int n) {
@@ -27,7 +22,6 @@ public class AreaAproximation {
         this.n = n;
         x = new double[n + 1];
         fx = new double[n + 1];
-
     }
 
     public void computeArea() {
@@ -35,15 +29,21 @@ public class AreaAproximation {
         area = 0;
         for (int i = 0; i <= n; i++) {
             x[i] = xIni + i * dx;
-            fx[i] = x[i] * x[i];
+            //fx[i]=x * x[i];
+            //fx [i]=Math.sqrt(9.0-x[i]*x[1];
+            fx[i] = 1/x[1];
             area = area + fx[i] * dx;
-
         }
+    }
 
+    public void print() {
+        for (int i = 0; i <= n; i++) {
+            System.out.println("x[" + i + "]: " + x[i] + ", fx[" + i + "]: " + fx[i]);
+        }
+        System.out.println("Area: " + area);
     }
 
     public double getArea() {
         return area;
     }
-
 }
