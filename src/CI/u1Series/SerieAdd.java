@@ -28,7 +28,7 @@ public class SerieAdd {
         for (int iValue = iIni; iValue <= iEnd; iValue++) {
             this.i[index] = iValue;
             // Modificar para una nueva serie
-            f[index] = iValue * iValue + 1;
+            f[index] = iValue * iValue - 1;
             total += f[index];
             index++;
         }
