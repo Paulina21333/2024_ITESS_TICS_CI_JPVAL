@@ -16,4 +16,17 @@ public class SumasEjemplo1 extends SumasRiemann {
     public double funcion(double x){
         return 10 - x*x;
     }
+
+    @Override
+    public void calcular() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void imprimir() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
